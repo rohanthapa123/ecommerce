@@ -10,14 +10,14 @@ const Nav = () => {
   const inActive = " text-black";
   return (
     <aside
-      className={`flex font-medium flex-col gap-4 bg-pink-200  w-fit lg:w-[20%] px-4 `}
+      className={`flex font-medium flex-col gap-4 bg-pink-200 h-screen    px-4  `}
     >
       <div>
         <Logo />
       </div>
       <Link
         href={"/"}
-        className={`flex flex-row px-2 ${
+        className={`flex text-xl flex-row px-2 ${
           pathname === "/" ? active : inActive
         } `}
       >
@@ -35,7 +35,7 @@ const Nav = () => {
             d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
           />
         </svg>
-        <span className="pl-2">Ecommerce Admin Panel</span>
+        <span className="pl-2">EcommerceAdmin</span>
       </Link>
       <Link
         href={"/dashboard"}
@@ -163,7 +163,7 @@ const Nav = () => {
       </Link>
       <Link
         href={"/"}
-        className={`flex flex-row px-2`}
+        className={`flex flex-row px-2 absolute top-[90%]`}
         onClick={(e) => signOut("google")}
       >
         <svg
