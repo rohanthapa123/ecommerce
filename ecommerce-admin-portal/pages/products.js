@@ -8,15 +8,17 @@ const products = () => {
     const [loading , setLoading] = useState(false)
     const [products, setProducts] = useState([]);
     useEffect(()=>{
+        setLoading(true)
         getProduct();
+        setLoading(false)
     },[])
     const getProduct = () => {
         setLoading(true)
         getProducts().then((resp)=>{
             setProducts(resp.data)
             console.log(resp.data)
+            setLoading(false)
         }) 
-        setLoading(false)
     }
     const deleteProduct = async (e, product) =>{
         e.preventDefault();

@@ -1,4 +1,3 @@
-import Navbar from '@/Components/Navbar'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
@@ -12,11 +11,9 @@ const test = () => {
     useEffect(()=>{
         getProduct();
     },[])
-    
+
   return (
     <>
-        <Navbar/>
-        <div className='grid grid-flow-row md:grid-cols-4 gap-4'>
         {
             products.map((product)=>{
                 return <div key={product.id} className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -43,7 +40,6 @@ const test = () => {
             </div>
             })
         }
-        </div>
 
 
     
